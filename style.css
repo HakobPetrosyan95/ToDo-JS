@@ -1,0 +1,170 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #0891b2;
+}
+h1{
+    font-size: 3.5rem;
+    color: rgba(247, 248, 248, 0.918);
+    transition: 1s ease-out;
+    &:hover{
+        cursor: pointer;
+        text-shadow: 0 10px 10px red;
+    }
+}
+
+.inputText{
+    background-color: rgba(255, 255, 255, 0.918);
+    font-weight: bold;
+    padding: 10px 0px;
+    background-color: black;
+    color: white;
+    border-radius: 15px;
+    font-size: 24px;
+    border: none;
+    font-family: italic;
+    text-align: center;
+    transition: 1s ease-in-out;
+    &:hover{
+        background-color: hsla(0, 0%, 0%, 0.76);
+        box-shadow: 5px 5px 35px rgb(27, 253, 223);
+        border:0.5px solid #16a34a;
+    }
+}
+input[type="checkbox"]{
+    width: 25px;
+    height: 25px;
+    
+}
+.submitText{
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.8s ease-out;
+    font-size: 24px;
+    font-weight: bold;
+    border-radius: 15px;
+    border: none;
+    &:hover{
+        background-color: rgb(4, 109, 4);
+        color: white;
+    }
+
+}
+
+.todo-list {
+    margin-top: 10px;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+.modalWindow{
+    position: absolute;
+    background-color: #a3e635;
+    top: 50%; left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    display: none;
+    font-size: 3rem;
+    width: 500px;
+    height: 300px;
+    border: 2px solid white;
+    margin: auto;
+}
+.modalWindow h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #115e59;
+}
+.modalWindow button{
+    transform: translateX(100px);
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 40px;
+    margin-left: 10px;
+    &:hover{
+        background-color: rgb(31, 121, 39);
+    }
+}
+.modalWindow .yes{
+    border: 2px solid #16a34a;
+    background-color: white;
+    color:#16a34a ;
+    &:hover{
+        background-color: #16a34a;
+        color:white;
+        border:2px solid white;
+    }
+}
+.modalWindow .no{
+    border: 2px solid #dc2626;
+    background-color: white;
+    color:#dc2626;
+    &:hover{
+        background-color: #dc2626;
+        color:white;
+        border:2px solid white;
+    }
+}
+.todo {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color:rgba(255, 255, 255, 0.699);
+    gap: 5px;
+    margin-bottom: 10px;
+    width: 350px;
+    height: 100px;
+    border-radius: 10px;
+    padding: 0px 10px;
+    background-color: rgb(29, 29, 46);
+    transition: 0.8s ease-out;
+    &:hover{
+        background-color: rgb(47, 92, 95);
+        color: rgb(238, 255, 0);
+    }
+}
+.todo.active .text {
+    text-decoration: line-through;
+}
+
+.todo .delete {
+    cursor: pointer;
+    font-weight: bold;
+    -webkit-text-stroke: 1px;
+    transition: 0.5s ease-out;
+    &:hover{
+       color: red;
+    }
+}
+
+.emptyWindow{
+    display: none;
+    width: 500px;
+    height: 250px;
+    margin: auto;
+    position: absolute;
+    background-color:hwb(352 15% 6%);
+    left: 50%;
+    transform: translateX(-50%) ;
+    border:2px solid black;
+    border-radius: 10px;
+}
+
+.emptyWindow h2{
+    text-align: center;
+    font-size: 3rem;
+    color: black;
+}
+
+.emptyWindow button{
+    transform: translateX(200px);
+    font-size: 2rem;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 0 20px;
+    margin-left: 20px;
+    &:hover{
+        background-color: rgb(31, 121, 39);
+        color: white;
+    }
+}
